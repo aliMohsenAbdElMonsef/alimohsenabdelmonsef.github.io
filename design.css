@@ -75,6 +75,7 @@ nav a.active {
     display: none;
     flex-direction: column;
     padding: 1rem;
+    z-index: 1000;
   }
 
   nav a {
