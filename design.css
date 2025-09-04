@@ -185,6 +185,7 @@ section {
 .home_content p {
   font-size: 1.6rem;
 }
+
 .social_icons a {
   display: inline-flex;
   justify-content: center;
@@ -563,7 +564,10 @@ section {
   background-color: var(--accent-hover);
   transform: scale(1.03);
 }
-
+.project_img {
+  display: flex;
+  justify-content: center;
+}
 @media (max-width: 768px) {
   .project_card {
     flex-direction: column;
@@ -572,6 +576,8 @@ section {
   .project_img {
     width: 100%;
     height: 200px;
+    display: flex;
+    justify-content: center;
   }
 }
 
