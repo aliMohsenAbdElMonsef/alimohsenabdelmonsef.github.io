@@ -1,0 +1,95 @@
+.testmonials {
+  position: relative;
+  margin: 5rem auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 1000px;
+}
+.testmonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+.testmonials > div {
+  position: relative;
+  width: 45%;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  margin: 3rem 0;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testmonials > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--shadow-color);
+}
+
+.testmonials > div::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  border: 3px solid var(--bg-color);
+  z-index: 2;
+}
+
+.testmonials > div:nth-child(odd) {
+  left: 0;
+}
+.testmonials > div:nth-child(odd)::before {
+  right: -10px;
+}
+
+.testmonials > div:nth-child(even) {
+  left: 55%;
+}
+.testmonials > div:nth-child(even)::before {
+  left: -10px;
+}
+
+.testmonials .header {
+  margin-bottom: 1rem;
+}
+.testmonials .name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+.testmonials .achievements {
+  font-size: 1.4rem;
+  color: var(--secondary-text);
+  margin-bottom: 0.8rem;
+}
+.testmonials .said {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .testmonials::before {
+    left: 10px;
+  }
+
+  .testmonials > div {
+    width: 100%;
+    left: 0 !important;
+    margin-left: 2rem;
+  }
+
+  .testmonials > div::before {
+    left: -30px !important;
+  }
+}
